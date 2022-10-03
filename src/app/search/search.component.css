@@ -1,0 +1,66 @@
+.background {
+    width: 100%;
+}
+
+.inputCentred {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heading1 {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Manrope', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    color: white;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardComponent {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.inputIp {
+    width: 30rem;
+    height: 2rem;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    border-radius: 15px;
+    border: none;
+    outline-width: 0;
+}
+
+.inputCentred button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: none;
+    text-align: center;
+    background-color: black;
+    height: 3rem;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 3rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.mapContainer {
+    position: absolute;
+}

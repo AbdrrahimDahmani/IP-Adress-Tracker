@@ -1,0 +1,12 @@
+<div class="container">
+    <img src="/assets/pattern-bg.png" class="background" alt="pattern">
+    <h1 class="heading1">IP Adress Tracker</h1>
+    <form>
+        <div class="inputCentred">
+            <input type="text" class="inputIp" id="ip" [formControl]="ip" placeholder="Search for any IP address or domain">
+            <button><i><img src="/assets/icon-arrow.svg" alt=""></i></button>
+        </div>
+    </form>
+    <app-card-ip-info class="cardComponent"></app-card-ip-info>
+</div>
+<app-map></app-map>

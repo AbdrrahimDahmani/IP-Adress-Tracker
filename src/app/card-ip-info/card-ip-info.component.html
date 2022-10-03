@@ -1,0 +1,13 @@
+<mat-card class="cardContainer">
+    <div class="textContainer">
+        <ng-container *ngFor="let title of cardTitles;let index=index">
+            <div class="textIpAddress">
+                <h2>{{title}}</h2>
+                <h3 style="margin-top: -0.6rem;">192.212.175.120</h3>
+            </div>
+            <div class="vertical-line" *ngIf="index<3"></div>
+        </ng-container>
+
+    </div>
+
+</mat-card>
