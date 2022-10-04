@@ -64,3 +64,40 @@
 .mapContainer {
     position: absolute;
 }
+
+.cardContainer {
+    width: 130vh;
+    height: 12vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.textContainer {
+    display: flex;
+    padding-left: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.textIpAddress h2 {
+    font-size: 0.8rem;
+    font-family: 'Manrope', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    color: var(--darkGray);
+    letter-spacing: 0.1rem;
+}
+
+.textIpAddress h3 {
+    font-size: 1.5rem;
+    font-family: 'Manrope', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+}
+
+.vertical-line {
+    position: relative;
+    margin-top: 9px;
+    margin-left: 45px;
+    margin-right: 20px;
+    border-left: 1px solid var(--darkGray);
+    height: 8vh;
+}

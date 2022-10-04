@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { MapService } from './map.service';
+import { IpTrackerService } from './ip-tracker.service';
 
-describe('MapService', () => {
-  let service: MapService;
+describe('IpTrackerService', () => {
+  let service: IpTrackerService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(MapService);
+    service = TestBed.inject(IpTrackerService);
   });
 
   it('should be created', () => {

@@ -1,12 +1,44 @@
 <div class="container">
-    <img src="/assets/pattern-bg.png" class="background" alt="pattern">
+    <img src="/assets/pattern-bg.png" class="background" alt="pattern" />
     <h1 class="heading1">IP Adress Tracker</h1>
     <form>
         <div class="inputCentred">
-            <input type="text" class="inputIp" id="ip" [formControl]="ip" placeholder="Search for any IP address or domain">
-            <button><i><img src="/assets/icon-arrow.svg" alt=""></i></button>
+            <input type="text" class="inputIp" [(ngModel)]="ip" name="ip" placeholder="Search for any IP address or domain" required="true" minlength="4" />
+            <button (click)="saveData()">
+        <i><img src="/assets/icon-arrow.svg" alt="" /></i>
+      </button>
         </div>
     </form>
-    <app-card-ip-info class="cardComponent"></app-card-ip-info>
+    <div class="cardComponent">
+        <mat-card class="cardContainer">
+            <div class="textContainer">
+                <ng-container>
+                    <!-- IP ADDRESS -->
+                    <div class="textIpAddress">
+                        <h2>IP ADDRESS</h2>
+                        <h3 style="margin-top: -0.6rem;">{{locationInfo.ip}}</h3>
+                    </div>
+                    <div class="vertical-line"></div>
+                    <!-- LOCATION -->
+                    <div class="textIpAddress">
+                        <h2>LOCATION</h2>
+                        <h3 style="margin-top: -0.6rem;">{{locationInfo.location.city}}, {{locationInfo.location.country}} <br>{{locationInfo.location.postalCode}}</h3>
+                    </div>
+                    <div class="vertical-line"></div>
+                    <!-- TIME ZONE -->
+                    <div class="textIpAddress">
+                        <h2>TIME ZONE</h2>
+                        <h3 style="margin-top: -0.6rem;">{{ "UTC"+locationInfo.location.timezone}}</h3>
+                    </div>
+                    <div class="vertical-line"></div>
+                    <!-- ISP -->
+                    <div class="textIpAddress">
+                        <h2>ISP</h2>
+                        <h3 style="margin-top: -0.6rem;">{{locationInfo.isp}}</h3>
+                    </div>
+                </ng-container>
+            </div>
+        </mat-card>
+    </div>
 </div>
-<app-map></app-map>
+<app-map [data]="data"></app-map>

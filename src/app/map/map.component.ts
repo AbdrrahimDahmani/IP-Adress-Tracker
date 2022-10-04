@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Pipe, PipeTransform } from '@angular/core';
+import { AfterViewInit, Component, Input,DoCheck  } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 @Component({
   selector: 'app-map',
@@ -6,15 +6,20 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./map.component.css']
 })
 
-export class MapComponent implements AfterViewInit {
-  data={
-    'lat':33.5731104,
-    'lng':-7.5898434
+export class MapComponent implements DoCheck,AfterViewInit {
+  @Input()
+  data:any={
+    lat:0.00,
+    lng: 0.00
   }
-  trustedUrl="http://maps.google.com/maps?q="+this.data.lat+","+this.data.lng+"&z=16&output=embed";
+  trustedUrl!: string;
 
-  constructor() { }
-
+  constructor() {
+   }
+   ngDoCheck(): void {
+    console.log(this.data)
+    this.trustedUrl="http://maps.google.com/maps?q="+this.data.lat+","+this.data.lng+"&z=16&output=embed"; 
+   }
   ngAfterViewInit(): void {
   }
 
