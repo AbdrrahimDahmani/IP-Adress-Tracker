@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   ipAdress:'',
-  isChecked:false
+  baseApiUrl:'https://geo.ipify.org/api/v2/country,city?apiKey=',
+  apiKey:'at_IgRBI40aArF3PnW2TiTUvxh1JThG5'
 };
 
 /*

@@ -10,7 +10,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import { MapComponent } from './map/map.component';
-import { AgmCoreModule } from '@agm/core';
 import { SafePipe } from './pipes/safe.pipe';
 @NgModule({
   declarations: [AppComponent, SearchComponent, MapComponent, SafePipe],
@@ -25,10 +24,6 @@ import { SafePipe } from './pipes/safe.pipe';
     MatCardModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AgmCoreModule.forRoot({
-      apiKey:'AIzaSyBeEFRFb10cLOfatjq5HFyUmdi2i2T6OG4'
-    })
-
   ],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
