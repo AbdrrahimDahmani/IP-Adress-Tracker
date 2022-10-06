@@ -154,7 +154,7 @@ screen and (min-height: 715px) {
         height: 3.5rem;
     }
     .cardContainer {
-        width: 38vh;
+        width: 300px;
         height: auto;
         border-radius: 20px;
         padding: 1rem 1rem 0rem;
@@ -237,7 +237,7 @@ screen and (min-height: 715px) {
         height: 3.5rem;
     }
     .cardContainer {
-        width: 38vh;
+        width: 300px;
         height: auto;
         border-radius: 20px;
         padding: 1rem 1rem 0rem;
