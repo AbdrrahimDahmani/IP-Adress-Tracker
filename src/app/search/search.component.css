@@ -131,7 +131,8 @@
     height: 10vh;
 }
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:500px),
+screen and (min-height: 715px) {
     .background {
         height: 43vh;
     }
@@ -211,5 +212,42 @@
     }
     .isp {
         width: 16rem;
+    }
+}
+
+@media (max-height:715px)and (max-width:500px) {
+    .background {
+        height: 43vh;
+    }
+    .heading1 {
+        top: 20%;
+        font-size: 1.125rem;
+    }
+    .cardComponent {
+        top: 130%;
+    }
+    .inputIp {
+        width: 18rem;
+        height: 2.5rem;
+    }
+    .inputCentred {
+        top: 39%;
+    }
+    .inputCentred button {
+        height: 3.5rem;
+    }
+    .cardContainer {
+        width: 38vh;
+        height: auto;
+        border-radius: 20px;
+        padding: 1rem 1rem 0rem;
+    }
+    .textContainer {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+    }
+    .vertical-line {
+        display: none;
     }
 }
