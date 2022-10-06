@@ -167,7 +167,7 @@
     }
 }
 
-@media screen and (min-width:501px) and (max-width:929px) {
+@media (min-width:501px) and (max-width:929px) {
     .background {
         height: 43vh;
     }
@@ -204,7 +204,7 @@
     }
 }
 
-@media screen and (min-width:930px) and (max-width:1080px) {
+@media (min-width:930px) and (max-width:1080px) {
     .cardContainer {
         width: 113vh;
     }
