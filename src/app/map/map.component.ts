@@ -44,7 +44,6 @@ export class MapComponent implements AfterViewInit, OnChanges {
         '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     }).addTo(map);
     var marker = L.marker([lat, lng]).addTo(map);
-    console.log('active');
     return map;
   }
   ngOnChanges(changes: SimpleChanges): void {
@@ -54,16 +53,13 @@ export class MapComponent implements AfterViewInit, OnChanges {
     ) {
       this.data.lat = changes['data'].currentValue.lat;
       this.data.lng = changes['data'].currentValue.lng;
-      console.log(this.data);
       var map1 = this.initMap(this.data.lat, this.data.lng);
       var container = L.DomUtil.get('map');
       if (container != null) {
         container['_leaflet_id'] = null;
       }
       if (container['_leaflet_id'] == null) {
-        console.log(map1);
         this.initMap(this.data.lat, this.data.lng);
-        console.log(map1);
       }
     }
   }
