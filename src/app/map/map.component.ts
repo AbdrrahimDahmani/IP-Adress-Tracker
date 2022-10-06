@@ -16,7 +16,6 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./map.component.css'],
 })
 export class MapComponent implements AfterViewInit, OnChanges {
-  isChecked = environment.isChecked;
   @Input()
   data: any = {
     lat: 0.0,

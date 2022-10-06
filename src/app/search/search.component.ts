@@ -56,7 +56,6 @@ export class SearchComponent implements OnInit {
             lat: res.location.lat,
             lng: res.location.lng,
           };
-          environment.isChecked = true;
         },
         (err) => {
           console.log(err);
