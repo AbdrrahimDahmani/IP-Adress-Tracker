@@ -8,7 +8,7 @@ import { geoLocation } from '../models/geoLocation.model';
   providedIn: 'root'
 })
 export class IpTrackerService {
-  apiKey="at_IgRBI40aArF3PnW2TiTUvxh1JThG5"
+  apiKey="at_rglrQnuBPe96xwyZqpxXH5jDBmfsf"
   baseApiUrl="https://geo.ipify.org/api/v2/country,city?apiKey="
   constructor(private http:HttpClient) { }
   getIpTrackInfos(ip:any):Observable<geoLocation>{
