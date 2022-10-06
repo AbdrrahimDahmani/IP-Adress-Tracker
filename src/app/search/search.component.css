@@ -144,7 +144,7 @@ screen and (min-height: 715px) {
         top: 115%;
     }
     .inputIp {
-        width: 18rem;
+        width: 300px;
         height: 2.5rem;
     }
     .inputCentred {
@@ -209,9 +209,13 @@ screen and (min-height: 715px) {
 @media (min-width:930px) and (max-width:1080px) {
     .cardContainer {
         width: 113vh;
+        height: auto;
     }
     .isp {
         width: 16rem;
+    }
+    .cardComponent {
+        top: 120%;
     }
 }
 
