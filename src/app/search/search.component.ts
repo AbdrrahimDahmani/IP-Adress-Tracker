@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { geoLocation } from '../models/geoLocation.model';
 import { IpTrackerService } from '../services/ip-tracker.service';
 
@@ -10,20 +11,40 @@ import { IpTrackerService } from '../services/ip-tracker.service';
 })
 export class SearchComponent implements OnInit {
   public ip: string = '';
-  public locationInfo!: any;
+  public locationInfo: any = {
+    ip: '',
+    location: {
+      country: '',
+      region: '',
+      city: '',
+      lat: 0.0,
+      lng: 0.0,
+      postalCode: '',
+      timezone: '',
+      geonameId: 0,
+    },
+    as: {
+      asn: 0,
+      name: '',
+      route: '',
+      domain: '',
+      type: '',
+    },
+    isp: '  ',
+  };
   public myIpAddress!: string;
-  data={
-    lat:0.00,
-    lng:0.00
-  }
+  data = {
+    lat: 0.0,
+    lng: 0.0,
+  };
   constructor(
     private ipTrackService: IpTrackerService,
     private http: HttpClient
   ) {}
 
   ngOnInit(): void {
-    this.getIPAddress()
-    this.saveData()
+    this.getIPAddress();
+    this.saveData();
   }
 
   saveData() {
@@ -31,12 +52,11 @@ export class SearchComponent implements OnInit {
       this.ipTrackService.getIpTrackInfos(this.ip).subscribe(
         (res: geoLocation) => {
           this.locationInfo = res;
-          console.log(this.locationInfo);
-          this.data=({
-            lat:res.location.lat,
-            lng: res.location.lng
-          })
-          console.log(this.data)
+          this.data = {
+            lat: res.location.lat,
+            lng: res.location.lng,
+          };
+          environment.isChecked = true;
         },
         (err) => {
           console.log(err);
