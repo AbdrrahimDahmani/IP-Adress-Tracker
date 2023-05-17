@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Code Source](https://github.com/AbdrrahimDahmani/IP-Adress-Tracker.git)
-- Live Site URL: [Demo](https://ipadress-track.netlify.app)
+- Live Site URL: [Demo](https://tracetracker.netlify.app)
 
 
 ### Built with
