@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   ipAdress:'',
   baseApiUrl:'',
-  apiKey:'',
+  apiKey:'at_h9fk3Kkhy6KSignRLMJj1x1wzoIPs',
   isChecked: false
 };
 
